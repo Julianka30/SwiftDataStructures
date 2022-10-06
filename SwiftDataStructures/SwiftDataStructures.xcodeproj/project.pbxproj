@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3D5206328EC3C3F000340F8 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D5206228EC3C3F000340F8 /* LinkedList.swift */; };
+		A3D5206928EC81A2000340F8 /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D5206828EC81A2000340F8 /* LinkedListTests.swift */; };
 		A3E1AF6728DDD9A900861976 /* SwiftDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E1AF5E28DDD9A800861976 /* SwiftDataStructures.framework */; };
-		A3E1AF6C28DDD9A900861976 /* SwiftDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E1AF6B28DDD9A900861976 /* SwiftDataStructuresTests.swift */; };
 		A3E1AF6D28DDD9A900861976 /* SwiftDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E1AF6128DDD9A800861976 /* SwiftDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -23,10 +24,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3D5206228EC3C3F000340F8 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		A3D5206828EC81A2000340F8 /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
 		A3E1AF5E28DDD9A800861976 /* SwiftDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E1AF6128DDD9A800861976 /* SwiftDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftDataStructures.h; sourceTree = "<group>"; };
 		A3E1AF6628DDD9A900861976 /* SwiftDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3E1AF6B28DDD9A900861976 /* SwiftDataStructuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataStructuresTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				A3E1AF6128DDD9A800861976 /* SwiftDataStructures.h */,
+				A3D5206228EC3C3F000340F8 /* LinkedList.swift */,
 			);
 			path = SwiftDataStructures;
 			sourceTree = "<group>";
@@ -77,7 +80,7 @@
 		A3E1AF6A28DDD9A900861976 /* SwiftDataStructuresTests */ = {
 			isa = PBXGroup;
 			children = (
-				A3E1AF6B28DDD9A900861976 /* SwiftDataStructuresTests.swift */,
+				A3D5206828EC81A2000340F8 /* LinkedListTests.swift */,
 			);
 			path = SwiftDataStructuresTests;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				TargetAttributes = {
 					A3E1AF5D28DDD9A800861976 = {
 						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
 					};
 					A3E1AF6528DDD9A900861976 = {
 						CreatedOnToolsVersion = 14.0;
@@ -191,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D5206328EC3C3F000340F8 /* LinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E1AF6C28DDD9A900861976 /* SwiftDataStructuresTests.swift in Sources */,
+				A3D5206928EC81A2000340F8 /* LinkedListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +392,7 @@
 		A3E1AF7228DDD9A900861976 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -455,6 +461,7 @@
 		A3E1AF7328DDD9A900861976 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
