@@ -26,4 +26,15 @@ final class LinkedListTests: XCTestCase {
         list.append("Julia")
         XCTAssertEqual(list.count, 2)
     }
+    
+    func test_remove() {
+        let list = LinkedList()
+        list.append("Anna")
+        list.append("Kate")
+        
+        list.remove("Anna")
+        XCTAssertEqual(list.toArray(), ["Kate"])
+        
+    }
+
 }

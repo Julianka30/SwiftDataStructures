@@ -53,8 +53,29 @@ public class LinkedList {
     }
     
     public func remove(_ value: String) {
+        guard let head = head else { return }
+        guard head.next != nil else {
+            if head.value == value {
+                self.head = nil
+                self.tail = nil
+            }
+            return
+        }
         
-    }
+        var it: Node? = head
+        var prev: Node? = nil
+        while it != nil {
+            if it!.value == value {
+                if prev == nil {
+                    self.head = it!.next
+                }
+                prev?.next = it!.next
+            } else {
+                prev = it
+            }
+            it = it!.next
+        }
+  }
         
     public func remove(at index: Int) {
         
