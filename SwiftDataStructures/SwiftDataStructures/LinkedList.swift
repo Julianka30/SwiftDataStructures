@@ -27,7 +27,7 @@ public class LinkedList {
         var count = 0
         var current = head
         while current != nil {
-            count+=1
+            count += 1
             current = current!.next
         }
         return count
@@ -53,15 +53,6 @@ public class LinkedList {
     }
     
     public func remove(_ value: String) {
-        guard let head = head else { return }
-        guard head.next != nil else {
-            if head.value == value {
-                self.head = nil
-                self.tail = nil
-            }
-            return
-        }
-        
         var it: Node? = head
         var prev: Node? = nil
         while it != nil {
@@ -75,10 +66,24 @@ public class LinkedList {
             }
             it = it!.next
         }
-  }
+    }
         
     public func remove(at index: Int) {
-        
+        var it: Node? = head
+        var prev: Node? = nil
+        var currentIndex = 0
+        while it != nil {
+            if currentIndex == index {
+                if prev == nil { //удаляется первый элемент
+                    self.head = it!.next // head переходит на след эл
+                }
+                prev?.next = it!.next // предыдущий эл ссылается на след после удаляемого
+            } else {
+                prev = it  // если эл не удаляли, то prev передвигается вместе с it
+            }
+            it = it!.next
+            currentIndex += 1
+        }
     }
     
     public func toArray() -> [String] {
