@@ -80,6 +80,9 @@ public class LinkedList {
                 if prev == nil { //удаляется первый элемент
                     self.head = it!.next // head переходит на след эл
                 }
+                if it!.next == nil {
+                    self.tail = prev
+                }
                 prev?.next = it!.next // предыдущий эл ссылается на след после удаляемого
             } else {
                 prev = it  // если эл не удаляли, то prev передвигается вместе с it
