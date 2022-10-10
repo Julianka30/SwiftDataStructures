@@ -35,6 +35,11 @@ final class LinkedListTests: XCTestCase {
         list.remove("Anna")
         XCTAssertEqual(list.toArray(), ["Kate"])
         
+    
+        list.append("Vasyl")
+        list.remove("Vasyl")
+        list.append("Pavlo")
+        XCTAssertEqual(list.toArray(), ["Kate", "Pavlo"])
     }
 
     func test_remove_at_index() {

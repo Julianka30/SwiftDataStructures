@@ -60,6 +60,9 @@ public class LinkedList {
                 if prev == nil {
                     self.head = it!.next
                 }
+                if it!.next == nil {
+                    self.tail = prev
+                }
                 prev?.next = it!.next
             } else {
                 prev = it
