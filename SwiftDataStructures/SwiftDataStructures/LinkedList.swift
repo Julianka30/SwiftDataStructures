@@ -45,11 +45,44 @@ public class LinkedList {
     }
     
     public func contains(_ value: String) -> Bool {
-        return true
+        var it: Node? = head
+        var ifContains = false
+        while it != nil {
+            if it!.value == value {
+                ifContains = true
+                break
+            } else {
+                it = it!.next
+            }
+         }
+        return ifContains
     }
     
     public func insert(_ value: String, at index: Int) {
-        
+        let node = Node(value: value)
+        var it: Node? = head
+        var prev: Node? = nil
+        var currentIndex = 0
+        while it != nil {
+            if currentIndex == index {
+                prev?.next = node
+                node.next = it
+                if prev == nil { //добавляем в 0
+                    self.head = node // head переходит на новый эл
+                }
+            } else {
+                prev = it  // prev передвигается вместе с it
+            }
+            it = it!.next
+            currentIndex += 1
+        }
+        if index == currentIndex {
+            if head == nil {
+                head = node
+            }
+            tail?.next = node
+            tail = node
+        }
     }
     
     public func remove(_ value: String) {
